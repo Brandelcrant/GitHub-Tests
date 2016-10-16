@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<head>
+<title>Lession 8 Project</title>
+
+<script language="JavaScript" type="text/javascript">
+	function storeName(form){
+		var userName = form.userName.value
+		document.cookie = "name=" + userName
+		var cName = document.cookie
+		if (userName === ""){
+			alert("Please enter your name.");
+			return false
+		}else {
+			alert("Winner?", document.cookie)
+			return false
+		 }
+	}
+
+</script>
+
+</head>
+<body>
+<strong>Please enter your name.</strong>
+<form onsubmit="storeName()">
+<input type="text" name="userName" />
+<p>
+<input type="submit" onClick="storeName(this.form)">
+<input type="button" value="Open new window" onClick="">
+</p>
+</form>
+</body>
+</html>
